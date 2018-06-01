@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>mongodb</title>
+  </head>
+  <body>
+    <span>Search</span>
+    <form action="http://localhost/getUsers" method="get">
+        <input type="text" name="name" placeholder="Enter name" />
+        <input type="submit" value="Search" />
+    </form>
+
+    <br>
+
+    <span>Add users</span>
+    <form action="http://localhost/addUser" method="get">
+        <input type="text" name="name" placeholder="Enter name" />
+        <input type="text" name="age" placeholder="Enter age" />
+        <input type="submit" value="Add" />
+    </form>
+
+    <br>
+
+    <span>Remove users</span>
+    <form action="http://localhost/removeUser" method="post">
+        <input type="text" name="name" placeholder="Enter name" />
+        <input type="text" name="age" placeholder="Enter age" />
+        <input type="submit" value="Remove" />
+    </form>
+
+    <br>
+
+    <form action="http://localhost/dropUser">
+        <input type="submit" value="Delete db" />
+    </form>
+  </body>
+</html>
