@@ -5,7 +5,7 @@
   </head>
   <body>
     <span>Search</span>
-    <form action="http://localhost/getUsers" method="get">
+    <form action="http://localhost:3000/getUsers" method="get">
         <input type="text" name="name" placeholder="Enter name" />
         <input type="submit" value="Search" />
     </form>
@@ -13,7 +13,7 @@
     <br>
 
     <span>Add users</span>
-    <form action="http://localhost/addUser" method="get">
+    <form action="http://localhost:3000/addUser" method="get">
         <input type="text" name="name" placeholder="Enter name" />
         <input type="text" name="age" placeholder="Enter age" />
         <input type="submit" value="Add" />
@@ -22,7 +22,7 @@
     <br>
 
     <span>Remove users</span>
-    <form action="http://localhost/removeUser" method="post">
+    <form action="http://localhost:3000/removeUser" method="get">
         <input type="text" name="name" placeholder="Enter name" />
         <input type="text" name="age" placeholder="Enter age" />
         <input type="submit" value="Remove" />
@@ -30,7 +30,7 @@
 
     <br>
 
-    <form action="http://localhost/dropUser">
+    <form action="http://localhost:3000/dropUser">
         <input type="submit" value="Delete db" />
     </form>
   </body>

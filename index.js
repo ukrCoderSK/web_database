@@ -8,7 +8,7 @@ let usersDB;
 
 mongoClient.connect(url, (err, db) => {
     if (err) throw err
-    usersDB = db.db("Test");
+    usersDB = db.db("npr-sv__bezhuk");
     console.log('db connection')
 })
 
@@ -24,10 +24,10 @@ app.get('/addUser', (req, res) => {
     })
 })
 
-app.post('/removeUser', (req, res) => {
-    usersDB.collection('user').findOneAndDelete({name: req.query.name, age: req.query.age} => {
+app.get('/removeUser', (req, res) => {
+    usersDB.collection('user').deleteMany({name: req.query.name, age: req.query.age}, (err, result) => {
         res.send('Delete user!')
-    }).exec();
+    })
 })
 
 app.get('/dropUser', (req, res) => {
@@ -36,6 +36,6 @@ app.get('/dropUser', (req, res) => {
   })
 })
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log('Server start')
 })
